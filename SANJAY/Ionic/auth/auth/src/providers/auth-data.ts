@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import firebase from 'firebase';
+import  firebase from 'firebase';
 
 
 @Injectable()
@@ -11,7 +11,7 @@ export class AuthData {
    * @param  {string} email    [User's email address]
    * @param  {string} password [User's password]
    */
-  loginUser(email: string, password: string): firebase.Promise<void> {
+  loginUser(email: string, password: string) {
     return firebase.auth().signInWithEmailAndPassword(email, password);
     
   }
@@ -27,7 +27,7 @@ export class AuthData {
    * @param  {number} mobileNo
    * 
    */
-  signupUser(email: string, password: string,name: string,mobileNo: number): firebase.Promise<void> {
+  signupUser(email: string, password: string,name: string,mobileNo: number) {
       return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUser) => {
          // firebase.database().ref('/users').child(email).set({
           //    firstName: "anonymous",
@@ -48,14 +48,14 @@ export class AuthData {
    *
    * @param  {string} email    [User's email address]
    */
-  resetPassword(email: string): firebase.Promise<void> {
+  resetPassword(email: string){
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
   /**
    * This function doesn't take any params, it just logs the current user out of the app.
    */
-  logoutUser(): firebase.Promise<void> {
+  logoutUser() {
     return firebase.auth().signOut();
   }
 
