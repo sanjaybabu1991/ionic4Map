@@ -11,7 +11,7 @@ export class AuthData {
    * @param  {string} email    [User's email address]
    * @param  {string} password [User's password]
    */
-  loginUser(email: string, password: string): firebase.Promise<any> {
+  loginUser(email: string, password: string): firebase.Promise<void> {
     return firebase.auth().signInWithEmailAndPassword(email, password);
     
   }
@@ -27,7 +27,7 @@ export class AuthData {
    * @param  {number} mobileNo
    * 
    */
-  signupUser(email: string, password: string,name: string,mobileNo: number): firebase.Promise<any> {
+  signupUser(email: string, password: string,name: string,mobileNo: number): firebase.Promise<void> {
       return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUser) => {
          // firebase.database().ref('/users').child(email).set({
           //    firstName: "anonymous",
@@ -48,14 +48,14 @@ export class AuthData {
    *
    * @param  {string} email    [User's email address]
    */
-  resetPassword(email: string): firebase.Promise<any> {
+  resetPassword(email: string): firebase.Promise<void> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
   /**
    * This function doesn't take any params, it just logs the current user out of the app.
    */
-  logoutUser(): firebase.Promise<any> {
+  logoutUser(): firebase.Promise<void> {
     return firebase.auth().signOut();
   }
 

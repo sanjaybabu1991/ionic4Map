@@ -19,7 +19,7 @@ import { IndexPage } from '../pages/index/index';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
 
-import { Sim } from '@ionic-native/sim';
+//import { Sim } from '@ionic-native/sim';
 
 
 @NgModule({
@@ -51,7 +51,8 @@ import { Sim } from '@ionic-native/sim';
       Login,
       ResetPassword,
       Signup,
-      IndexPage
+      IndexPage,
+      AdminPage
   ],
   providers: [
       AuthData,
@@ -59,8 +60,8 @@ import { Sim } from '@ionic-native/sim';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    Device,
-    Sim
+    Device
+  //  Sim
     
   ]
 })

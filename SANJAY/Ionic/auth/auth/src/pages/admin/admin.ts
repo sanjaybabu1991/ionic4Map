@@ -1,13 +1,13 @@
 import { Component, ViewChild, ElementRef  } from '@angular/core';
-import { IonicPage,Platform, NavController, NavParams } from 'ionic-angular';
+import { Platform, NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
 //sim
-import { Sim } from '@ionic-native/sim';
+//import { Sim } from '@ionic-native/sim';
 import * as firebase from 'firebase';
 declare var google: any;
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-admin',
   templateUrl: 'admin.html',
@@ -24,11 +24,11 @@ export class AdminPage
   public simInfo: any;
   public cards: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,private device: Device,private sim: Sim) 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,private device: Device) 
   {
     platform.ready().then(() => {
      // this.initMap();  
-     this.getSimData(); 
+    // this.getSimData(); 
       // var temp;
       // //sim info
       // this.sim.getSimInfo().then(
@@ -77,22 +77,7 @@ export class AdminPage
   // );
     })
   }
-  async getSimData() {
-    try {
-      let simPermission = await this.sim.requestReadPermission();
-      if (simPermission == "OK") {
-        let simData = await this.sim.getSimInfo();
-        this.simInfo = simData;
-        this.cards = simData.cards;
-        //console.log(simData);
-        this.temp = JSON.stringify(simData);
-      }
-    } catch (error) {
-      this.temp = JSON.stringify(error);
-      //console.log(error);
-    }
-  }
-
+  
   //functions
   
   gotToAdmin2()
