@@ -15,6 +15,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+//import { IonicModule } from 'ionic-angular';
 
 var ResetPasswordModule = /** @class */ (function () {
     function ResetPasswordModule() {
