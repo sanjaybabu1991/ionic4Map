@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Admin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ <ion-list >
+    <ion-item>
+      <ion-label floating>Mobile No.</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <br /><br />
+    <!-- <button ion-button block>Track</button> -->
+    <button ion-button (click) = "gotToAdmin2()">Go To Admin</button>
+    {{temp}}
+  </ion-list> 
+
+  
+    <!-- map -->
+  <div #map id="map" style="height: 100%;"></div>
+ 
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><small>Copyright 2018</small></ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
