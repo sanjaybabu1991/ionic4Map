@@ -81,28 +81,49 @@ export class AdminPage
   //functions
   
   gotToAdmin2()
-  { 
+  {  var data ;
     this.ref.on("value", function(snapshot) 
     {
+     // data = snapshot.val();
+      localStorage.setItem('cord',snapshot.val());
       console.log(snapshot.val());
     }, function (error) {
       console.log("Error: " + error.code);
    });
 
 
+   var tempCord = localStorage.getItem('cord');
 
-    this.initMap()
+      var tempKey = Object.keys(tempCord);
+      var currentUser = localStorage.getItem('mobId');
+      tempKey.forEach(function(element)
+      { 
+        console.log(element,currentUser);
+        if(currentUser == element)
+        {
+         this.initMap(tempCord[element].latitude,tempCord[element].longitude) 
+          return false;
+        }else
+        {
+          console.log('Unable to getting location');
+        }
+      })
+
+
+
+
+    // this.initMap()
     //console.log('called');
    // this.navCtrl.push(AdminPage)
   }
 
-  initMap() 
+  initMap(latitude,longitude) 
   { 
+    console.log('initMap');
     this.geolocation.getCurrentPosition({ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }).then((resp) => 
     {
-      
-      
-      let mylocation = new google.maps.LatLng(resp.coords.latitude,resp.coords.longitude);
+          
+      let mylocation = new google.maps.LatLng(latitude,longitude);
       this.map = new google.maps.Map(this.mapElement.nativeElement, 
       {
         zoom: 15,
@@ -115,9 +136,9 @@ export class AdminPage
 
     watch.subscribe((data) => {
       this.deleteMarkers();
-      this.updateGeolocation(this.device.uuid, data.coords.latitude,data.coords.longitude);
+      //this.updateGeolocation(this.device.uuid, latitude,longitude);
       
-      let updatelocation = new google.maps.LatLng(data.coords.latitude,data.coords.longitude);
+      let updatelocation = new google.maps.LatLng(latitude,longitude);
       let image = 'assets/imgs/location2.png';
       this.addMarker(updatelocation,image);
       this.setMapOnAll(this.map);

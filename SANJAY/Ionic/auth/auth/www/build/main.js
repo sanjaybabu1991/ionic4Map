@@ -85,19 +85,36 @@ var AdminPage = /** @class */ (function () {
     }
     //functions
     AdminPage.prototype.gotToAdmin2 = function () {
+        var data;
         this.ref.on("value", function (snapshot) {
+            // data = snapshot.val();
+            localStorage.setItem('cord', snapshot.val());
             console.log(snapshot.val());
         }, function (error) {
             console.log("Error: " + error.code);
         });
-        this.initMap();
+        var tempCord = localStorage.getItem('cord');
+        var tempKey = Object.keys(tempCord);
+        var currentUser = localStorage.getItem('mobId');
+        tempKey.forEach(function (element) {
+            console.log(element, currentUser);
+            if (currentUser == element) {
+                this.initMap(tempCord[element].latitude, tempCord[element].longitude);
+                return false;
+            }
+            else {
+                console.log('Unable to getting location');
+            }
+        });
+        // this.initMap()
         //console.log('called');
         // this.navCtrl.push(AdminPage)
     };
-    AdminPage.prototype.initMap = function () {
+    AdminPage.prototype.initMap = function (latitude, longitude) {
         var _this = this;
+        console.log('initMap');
         this.geolocation.getCurrentPosition({ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }).then(function (resp) {
-            var mylocation = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
+            var mylocation = new google.maps.LatLng(latitude, longitude);
             _this.map = new google.maps.Map(_this.mapElement.nativeElement, {
                 zoom: 15,
                 center: mylocation
@@ -109,8 +126,8 @@ var AdminPage = /** @class */ (function () {
         var watch = this.geolocation.watchPosition();
         watch.subscribe(function (data) {
             _this.deleteMarkers();
-            _this.updateGeolocation(_this.device.uuid, data.coords.latitude, data.coords.longitude);
-            var updatelocation = new google.maps.LatLng(data.coords.latitude, data.coords.longitude);
+            //this.updateGeolocation(this.device.uuid, latitude,longitude);
+            var updatelocation = new google.maps.LatLng(latitude, longitude);
             var image = 'assets/imgs/location2.png';
             _this.addMarker(updatelocation, image);
             _this.setMapOnAll(_this.map);
@@ -169,15 +186,16 @@ var AdminPage = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _a || Object)
     ], AdminPage.prototype, "mapElement", void 0);
     AdminPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-admin',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/'\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Admin</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n <ion-list >\n\n    <ion-item>\n\n      <ion-label floating>Mobile No.</ion-label>\n\n      <ion-input type="number"></ion-input>\n\n    </ion-item>\n\n    <br /><br />\n\n    <!-- <button ion-button block>Track</button> -->\n\n    <button ion-button (click) = "gotToAdmin2()">Go To Admin</button>\n\n    {{temp}}\n\n  </ion-list> \n\n\n\n  \n\n    <!-- map -->\n\n  <div #map id="map" style="height: 100%;"></div>\n\n \n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n    <ion-title><small>Copyright 2018</small></ion-title>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n\n\n\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/,
+            selector: 'page-admin',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Live Track</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n <ion-list >\n    <ion-item>\n      <ion-label floating>Mobile No.</ion-label>\n      <ion-input type="number"></ion-input>\n    </ion-item>\n    <br /><br />\n    <!-- <button ion-button block>Track</button> -->\n    <button ion-button (click) = "gotToAdmin2()">Track</button>\n    {{temp}}\n  </ion-list> \n\n  \n    <!-- map -->\n  <div #map id="map" style="height: 100%;"></div>\n \n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title><small>Copyright 2018</small></ion-title>\n  </ion-toolbar>\n</ion-footer>\n\n\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */]) === "function" && _f || Object])
     ], AdminPage);
     return AdminPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 var snapshotToArray = function (snapshot) {
@@ -301,14 +319,12 @@ var Login = /** @class */ (function () {
     };
     Login = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\login\login.html"*/'<!--\n\n  Generated template for the Login page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content id="login" >\n\n\n\n     <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n         <!--divs-->\n\n            <div class="row responsive-md">\n\n                <div class="col col-50 col-offset-25">\n\n                        <!---->\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Email</ion-label>\n\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n\n      <p>Please enter a valid email.</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Password</ion-label>\n\n      <ion-input #password formControlName="password" type="password" placeholder="Your password" \n\n        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">\n\n      <p>Your password needs more than 6 characters.</p>\n\n    </ion-item>\n\n\n\n    <button ion-button block type="submit">\n\n      Login\n\n    </button>\n\n                     <button ion-button block clear (click)="goToSignup()">\n\n      Create a new account\n\n    </button>\n\n\n\n    <button ion-button block clear (click)="goToResetPassword()">\n\n      I forgot my password\n\n    </button>\n\n\n\n   </div>\n\n    </div>\n\n\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/login/login.html"*/'\n\n<ion-header>\n\n  <ion-navbar color="primary" >\n\n    <ion-title>LOGIN</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content id="login" >\n\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n    <!--divs-->\n\n    <div class="row responsive-md">\n\n      <div class="col col-50 col-offset-25">\n\n        <ion-item>\n\n          <ion-label stacked>Email</ion-label>\n\n          <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n\n        <p>Please enter a valid email.</p>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label stacked>Password</ion-label>\n\n            <ion-input #password formControlName="password" type="password" placeholder="Your password" \n\n        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>\n\n          </ion-item>\n\n          <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">\n\n          <p>Your password needs more than 6 characters.</p>\n\n          </ion-item>\n\n        <button ion-button block type="submit">\n\n          LOGIN\n\n        </button>\n\n        <button ion-button block clear (click)="goToSignup()">\n\n          Create a new account\n\n        </button>\n\n        <button ion-button block clear (click)="goToResetPassword()">\n\n          I forgot my password\n\n        </button>\n\n      </div>\n\n    </div>\n\n  </form>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-navbar color="primary" >\n\n    <ion-title>Copyright 2018 <small>  |  Version 1.0</small></ion-title>\n\n  </ion-navbar>\n\n</ion-footer>'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _g || Object])
     ], Login);
     return Login;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -399,7 +415,7 @@ var ResetPassword = /** @class */ (function () {
     };
     ResetPassword = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-reset-password',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\reset-password\reset-password.html"*/'<!--\n  Generated template for the ResetPassword page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>reset-password</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n     <form [formGroup]="resetPasswordForm" (submit)="resetPassword()" novalidate>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Email</ion-label>\n\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!resetPasswordForm.controls.email.valid && resetPasswordForm.controls.email.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!resetPasswordForm.controls.email.valid  && resetPasswordForm.controls.email.dirty">\n\n      <p>Please enter a valid email.</p>\n\n    </ion-item>\n\n\n\n    <button ion-button block type="submit">\n\n      Reset your Password\n\n    </button>\n\n\n\n  </form>\n</ion-content>\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\reset-password\reset-password.html"*/,
+            selector: 'page-reset-password',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/reset-password/reset-password.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Reset- Password</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n     <form [formGroup]="resetPasswordForm" (submit)="resetPassword()" novalidate>\n\n    <ion-item>\n      <ion-label stacked>Email</ion-label>\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n        [class.invalid]="!resetPasswordForm.controls.email.valid && resetPasswordForm.controls.email.dirty">\n        </ion-input>\n    </ion-item>\n    <ion-item class="error-message" \n      *ngIf="!resetPasswordForm.controls.email.valid  && resetPasswordForm.controls.email.dirty">\n      <p>Please enter a valid email.</p>\n    </ion-item>\n\n    <button ion-button block type="submit">\n      Reset your Password\n    </button>\n  </form>\n</ion-content>\n\n\n<ion-footer>\n  <ion-navbar color="primary" >\n    <ion-title>Copyright 2018 <small>Version 1.0</small></ion-title>\n  </ion-navbar>\n</ion-footer>'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/reset-password/reset-password.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_auth_data__["a" /* AuthData */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["f" /* LoadingController */],
@@ -495,7 +511,7 @@ var Signup = /** @class */ (function () {
     };
     Signup = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the Signup page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>signup</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n     <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>\n\n   \n\n    <ion-item>\n\n      <ion-label stacked>Email</ion-label>\n\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">\n\n      <p>Please enter a valid email.</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Password</ion-label>\n\n      <ion-input #password formControlName="password" type="password" placeholder="Your password" \n\n        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">\n\n      <p>Your password needs more than 6 characters.</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Name</ion-label>\n\n      <ion-input #name formControlName="name" type="text" placeholder="Your Name" \n\n        [class.invalid]="!signupForm.controls.name.valid && signupForm.controls.name.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label stacked>Mobile No</ion-label>\n\n      <ion-input #mobileNo formControlName="mobileNo" type="text" placeholder="Mobile No" \n\n        [class.invalid]="!signupForm.controls.mobileNo.valid && signupForm.controls.mobileNo.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block type="submit">\n\n      Create an Account\n\n    </button>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/signup/signup.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <ion-title>SIGN UP</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n     <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>\n\n   \n\n    <ion-item>\n\n      <ion-label stacked>Email</ion-label>\n\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">\n\n      <p>Please enter a valid email.</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Password</ion-label>\n\n      <ion-input #password formControlName="password" type="password" placeholder="Your password" \n\n        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item class="error-message" \n\n      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">\n\n      <p>Your password needs more than 6 characters.</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label stacked>Name</ion-label>\n\n      <ion-input #name formControlName="name" type="text" placeholder="Your Name" \n\n        [class.invalid]="!signupForm.controls.name.valid && signupForm.controls.name.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label stacked>Mobile No</ion-label>\n\n      <ion-input #mobileNo formControlName="mobileNo" type="text" placeholder="Mobile No" \n\n        [class.invalid]="!signupForm.controls.mobileNo.valid && signupForm.controls.mobileNo.dirty">\n\n        </ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block type="submit">\n\n      Create an Account\n\n    </button>\n\n  </form>\n\n</ion-content>\n\n\n\n\n\n<ion-footer>\n\n  <ion-navbar color="primary" >\n\n    <ion-title>Copyright 2018 <small>Version 1.0</small></ion-title>\n\n  </ion-navbar>\n\n</ion-footer>'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/signup/signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_data__["a" /* AuthData */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -587,7 +603,7 @@ var TabsPage = /** @class */ (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -622,7 +638,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], AboutPage);
@@ -657,7 +673,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-icon name="ionic" item-left></ion-icon>\n\n      @ionicframework\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], ContactPage);
@@ -698,7 +714,7 @@ var IndexPage = /** @class */ (function () {
     };
     IndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-index',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\index\index.html"*/'<!--\n\n  Generated template for the IndexPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>index</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<button ion-button (click) = "gotToAdmin()">Go To Admin</button>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\index\index.html"*/,
+            selector: 'page-index',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/index/index.html"*/'<!--\n  Generated template for the IndexPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>index</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<button ion-button (click) = "gotToAdmin()">Go To Admin</button>\n</ion-content>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/index/index.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], IndexPage);
@@ -842,8 +858,10 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_firebase__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -862,9 +880,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 //import { AdminPage } from '../admin/admin';
 
+
+//sim
+
 var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen) {
+    function MyApp(platform, statusBar, splashScreen, geolocation, device) {
         var _this = this;
+        this.geolocation = geolocation;
+        this.device = device;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */];
         // Initialize Firebase  
         var config = {
@@ -875,17 +898,39 @@ var MyApp = /** @class */ (function () {
             storageBucket: "geotracker-a4855.appspot.com",
             messagingSenderId: "766037115636"
         };
-        __WEBPACK_IMPORTED_MODULE_7_firebase___default.a.initializeApp(config);
-        __WEBPACK_IMPORTED_MODULE_7_firebase___default.a.auth().onAuthStateChanged(function (user) {
+        __WEBPACK_IMPORTED_MODULE_9_firebase___default.a.initializeApp(config);
+        __WEBPACK_IMPORTED_MODULE_9_firebase___default.a.auth().onAuthStateChanged(function (user) {
             if (!user) {
                 console.log("not login");
                 _this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* Login */];
             }
             else {
-                console.log("login");
+                //console.log("login");
+                var database = __WEBPACK_IMPORTED_MODULE_9_firebase___default.a.database();
+                var ref = database.ref('userProfile');
+                ref.on("value", function (data) {
+                    var tempdata = data.val();
+                    var keys = Object.keys(tempdata);
+                    //console.log(keys);
+                    keys.forEach(function (element) {
+                        if (tempdata[element].mobileNo == element) {
+                            localStorage.setItem('mobId', tempdata[element].mobileNo);
+                            return false;
+                        }
+                    });
+                    //////
+                }, function (error) {
+                    console.log("Error: " + error.code);
+                });
                 _this.rootPage = __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */];
             }
         });
+        ////update location
+        var watch = this.geolocation.watchPosition();
+        watch.subscribe(function (data) {
+            _this.updateGeolocation(_this.device.uuid, data.coords.latitude, data.coords.longitude);
+        });
+        ////////
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -894,12 +939,39 @@ var MyApp = /** @class */ (function () {
             // firebase.initializeApp(config);
         });
     }
+    MyApp.prototype.updateGeolocation = function (uuid, lat, lng) {
+        // console.log(localStorage.getItem('mykey'));
+        var userId = localStorage.getItem('mobId');
+        // let pass = 1234;
+        if (userId) {
+            __WEBPACK_IMPORTED_MODULE_9_firebase___default.a.database().ref('geolocations/' + userId).set({
+                uuid: uuid,
+                latitude: lat,
+                longitude: lng,
+                time: new Date().getTime()
+            });
+        }
+        else {
+            console.log('not found');
+            var database = __WEBPACK_IMPORTED_MODULE_9_firebase___default.a.database();
+            var ref = database.ref('geolocations/' + userId);
+            var newData = ref.push();
+            newData.set({
+                uuid: uuid,
+                latitude: lat,
+                longitude: lng,
+                time: new Date().getTime()
+            });
+            // localStorage.setItem('mykey',userId)
+        }
+    };
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__["a" /* Device */]) === "function" && _e || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -974,6 +1046,7 @@ var AuthData = /** @class */ (function () {
      * This function doesn't take any params, it just logs the current user out of the app.
      */
     AuthData.prototype.logoutUser = function () {
+        localStorage.clear();
         return __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.auth().signOut();
     };
     AuthData = __decorate([
@@ -1030,7 +1103,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n   you are authenticated\n\n      <button ion-button icon-only (click)="logOut()"> log out\n\n        <ion-icon name="log-out"></ion-icon>\n\n      </button>\n\n  \n\n\n\n  <button ion-button (click) = "gotToAdmin()">Go To Admin</button>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Live Tracker</ion-title>\n  </ion-navbar>\n  \n  <button ion-button round color="danger" (click)="logOut()" float-right> log out &nbsp;\n    <ion-icon name="contact"></ion-icon>\n  </button>\n</ion-header>\n\n<ion-content padding>\n  <br />\n  <br /><br />\n  <button ion-button round color="secondary" (click) = "gotToAdmin()">Track Location</button>\n</ion-content>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__providers_auth_data__["a" /* AuthData */]])
     ], HomePage);

@@ -1,15 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Live Tracker</ion-title>
   </ion-navbar>
+  
+  <button ion-button round color="danger" (click)="logOut()" float-right> log out &nbsp;
+    <ion-icon name="contact"></ion-icon>
+  </button>
 </ion-header>
 
 <ion-content padding>
-   you are authenticated
-      <button ion-button icon-only (click)="logOut()"> log out
-        <ion-icon name="log-out"></ion-icon>
-      </button>
-  
-
-  <button ion-button (click) = "gotToAdmin()">Go To Admin</button>
+  <br />
+  <br /><br />
+  <button ion-button round color="secondary" (click) = "gotToAdmin()">Track Location</button>
 </ion-content>

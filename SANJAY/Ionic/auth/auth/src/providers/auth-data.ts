@@ -13,7 +13,6 @@ export class AuthData {
    */
   loginUser(email: string, password: string) {
     return firebase.auth().signInWithEmailAndPassword(email, password);
-    
   }
 
   /**
@@ -28,7 +27,8 @@ export class AuthData {
    * 
    */
   signupUser(email: string, password: string,name: string,mobileNo: number) {
-      return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUser) => {
+      return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUser) => 
+      {
          // firebase.database().ref('/users').child(email).set({
           //    firstName: "anonymous",
            //   id:newUser.uid,
@@ -55,8 +55,9 @@ export class AuthData {
   /**
    * This function doesn't take any params, it just logs the current user out of the app.
    */
-  logoutUser() {
+  logoutUser() 
+  {  
+    localStorage.clear();
     return firebase.auth().signOut();
   }
-
 }
