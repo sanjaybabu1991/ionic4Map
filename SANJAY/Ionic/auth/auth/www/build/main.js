@@ -8,9 +8,9 @@ webpackJsonp([3],{
 /* unused harmony export snapshotToArray */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -31,6 +31,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //@IonicPage()
 var AdminPage = /** @class */ (function () {
     function AdminPage(navCtrl, navParams, platform, geolocation, device) {
+        // platform.ready().then(() => {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.platform = platform;
@@ -38,76 +39,25 @@ var AdminPage = /** @class */ (function () {
         this.device = device;
         this.markers = [];
         this.ref = __WEBPACK_IMPORTED_MODULE_4_firebase__["database"]().ref('geolocations/');
-        platform.ready().then(function () {
-            // this.initMap();  
-            // this.getSimData(); 
-            // var temp;
-            // //sim info
-            // this.sim.getSimInfo().then(
-            // (info) => //console.log('Sim info: ', info),
-            //  this.temp =JSON.stringify(info),
-            // (err) => alert('Unable to get sim info: ')
-            // );
-            //     this.sim.hasReadPermission().then(
-            //   (info) => console.log('Has permission: ', info)
-            // );
-            // this.sim.requestReadPermission().then(
-            //   () => console.log('Permission granted'),
-            //   () => console.log('Permission denied')
-            // );
-            // });
-            // this.ref.on('value', resp => 
-            // {
-            //   this.deleteMarkers();
-            //   snapshotToArray(resp).forEach(data => 
-            //   {
-            //     if(data.uuid !== this.device.uuid) {
-            //       let image = 'assets/imgs/location2.png';
-            //       let updatelocation = new google.maps.LatLng(data.latitude,data.longitude);
-            //       this.addMarker(updatelocation,image);
-            //       this.setMapOnAll(this.map);
-            //     } else {
-            //       let image = 'assets/imgs/location2.png';
-            //       let updatelocation = new google.maps.LatLng(data.latitude,data.longitude);
-            //       this.addMarker(updatelocation,image);
-            //       this.setMapOnAll(this.map);
-            //     }
-            //   });
-            // });
-            // this.sim.hasReadPermission().then(
-            //   (info) => console.log('Has permission: ', info)
-            // );
-            // this.sim.requestReadPermission().then(
-            //   () => console.log('Permission granted'),
-            //   () => console.log('Permission denied')
-            // );
-        });
+        // })
     }
     //functions
     AdminPage.prototype.gotToAdmin2 = function () {
-        var data;
+        var tempMobileNo = this.trackMobileNo;
         this.ref.on("value", function (snapshot) {
-            // data = snapshot.val();
-            localStorage.setItem('cord', snapshot.val());
-            console.log(snapshot.val());
+            var tempCords = snapshot.val()[tempMobileNo];
+            if (tempCords) {
+                localStorage.setItem('latitude', tempCords.latitude);
+                localStorage.setItem('longitude', tempCords.longitude);
+            }
+            // console.log(snapshot.val());
         }, function (error) {
             console.log("Error: " + error.code);
         });
-        var tempCord = localStorage.getItem('cord');
-        var tempKey = Object.keys(tempCord);
-        var currentUser = localStorage.getItem('mobId');
-        tempKey.forEach(function (element) {
-            console.log(element, currentUser);
-            if (currentUser == element) {
-                this.initMap(tempCord[element].latitude, tempCord[element].longitude);
-                return false;
-            }
-            else {
-                console.log('Unable to getting location');
-            }
-        });
-        // this.initMap()
-        //console.log('called');
+        //console.log(this.trackMobileNo);
+        var latitude = localStorage.getItem('latitude');
+        var longitude = localStorage.getItem('longitude');
+        this.initMap(latitude, longitude);
         // this.navCtrl.push(AdminPage)
     };
     AdminPage.prototype.initMap = function (latitude, longitude) {
@@ -190,7 +140,7 @@ var AdminPage = /** @class */ (function () {
     ], AdminPage.prototype, "mapElement", void 0);
     AdminPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-admin',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Live Track</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n <ion-list >\n    <ion-item>\n      <ion-label floating>Mobile No.</ion-label>\n      <ion-input type="number"></ion-input>\n    </ion-item>\n    <br /><br />\n    <!-- <button ion-button block>Track</button> -->\n    <button ion-button (click) = "gotToAdmin2()">Track</button>\n    {{temp}}\n  </ion-list> \n\n  \n    <!-- map -->\n  <div #map id="map" style="height: 100%;"></div>\n \n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title><small>Copyright 2018</small></ion-title>\n  </ion-toolbar>\n</ion-footer>\n\n\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/,
+            selector: 'page-admin',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Live Track</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n <ion-list >\n    <ion-item>\n      <ion-label floating>Mobile No.</ion-label>\n      <ion-input type="number" [(ngModel)]="trackMobileNo"></ion-input>\n      \n    </ion-item>\n    <br /><br />\n    <!-- <button ion-button block>Track</button> -->\n    <button ion-button (click) = "gotToAdmin2()">Track</button>\n    {{temp}}\n  </ion-list> \n  {{trackMobileNo}}\n  \n    <!-- map -->\n  <div #map id="map" style="height: 100%;"></div>\n \n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title><small>Copyright 2018</small></ion-title>\n  </ion-toolbar>\n</ion-footer>\n\n\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/admin/admin.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */]) === "function" && _f || Object])
     ], AdminPage);
@@ -211,7 +161,7 @@ var snapshotToArray = function (snapshot) {
 
 /***/ }),
 
-/***/ 123:
+/***/ 125:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,7 +183,7 @@ var EmailValidator = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 124:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -241,11 +191,11 @@ var EmailValidator = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators_email__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators_email__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reset_password_reset_password__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__signup_signup__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reset_password_reset_password__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__signup_signup__ = __webpack_require__(149);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -321,17 +271,19 @@ var Login = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/login/login.html"*/'\n\n<ion-header>\n\n  <ion-navbar color="primary" >\n\n    <ion-title>LOGIN</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content id="login" >\n\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n    <!--divs-->\n\n    <div class="row responsive-md">\n\n      <div class="col col-50 col-offset-25">\n\n        <ion-item>\n\n          <ion-label stacked>Email</ion-label>\n\n          <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n\n        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n\n        <p>Please enter a valid email.</p>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label stacked>Password</ion-label>\n\n            <ion-input #password formControlName="password" type="password" placeholder="Your password" \n\n        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>\n\n          </ion-item>\n\n          <ion-item class="error-message" \n\n      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">\n\n          <p>Your password needs more than 6 characters.</p>\n\n          </ion-item>\n\n        <button ion-button block type="submit">\n\n          LOGIN\n\n        </button>\n\n        <button ion-button block clear (click)="goToSignup()">\n\n          Create a new account\n\n        </button>\n\n        <button ion-button block clear (click)="goToResetPassword()">\n\n          I forgot my password\n\n        </button>\n\n      </div>\n\n    </div>\n\n  </form>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-navbar color="primary" >\n\n    <ion-title>Copyright 2018 <small>  |  Version 1.0</small></ion-title>\n\n  </ion-navbar>\n\n</ion-footer>'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _g || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], Login);
     return Login;
-    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=login.js.map
 
 /***/ }),
 
-/***/ 146:
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -340,7 +292,7 @@ var Login = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_data__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validators_email__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validators_email__ = __webpack_require__(125);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -428,7 +380,7 @@ var ResetPassword = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 147:
+/***/ 149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -437,7 +389,7 @@ var ResetPassword = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_data__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validators_email__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validators_email__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(60);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -524,7 +476,7 @@ var Signup = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 156:
+/***/ 158:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -537,11 +489,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 156;
+webpackEmptyAsyncContext.id = 158;
 
 /***/ }),
 
-/***/ 197:
+/***/ 199:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -569,7 +521,7 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 197;
+webpackAsyncContext.id = 199;
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -751,17 +703,17 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tabs_tabs__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_reset_password_reset_password__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_reset_password_reset_password__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_auth_data__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_admin_admin__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_home_home__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_index_index__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_geolocation__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_device__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_geolocation__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_device__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -856,11 +808,11 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -968,10 +920,9 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__["a" /* Device */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_8__ionic_native_device__["a" /* Device */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -984,7 +935,7 @@ var MyApp = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthData; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1067,7 +1018,7 @@ var AuthData = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_auth_data__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_admin__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

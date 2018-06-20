@@ -14,6 +14,8 @@ declare var google: any;
 })
 export class AdminPage 
 {
+  trackMobileNo;
+    
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   temp : any;
@@ -23,97 +25,40 @@ export class AdminPage
   
   public simInfo: any;
   public cards: any;
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,private device: Device) 
   {
-    platform.ready().then(() => {
-     // this.initMap();  
-    // this.getSimData(); 
-      // var temp;
-      // //sim info
-      // this.sim.getSimInfo().then(
-      // (info) => //console.log('Sim info: ', info),
-      //  this.temp =JSON.stringify(info),
-      // (err) => alert('Unable to get sim info: ')
-      // );
-
-  //     this.sim.hasReadPermission().then(
-  //   (info) => console.log('Has permission: ', info)
-  // );
-  
-  // this.sim.requestReadPermission().then(
-  //   () => console.log('Permission granted'),
-  //   () => console.log('Permission denied')
-  // );
-   // });
-
-    // this.ref.on('value', resp => 
-    // {
-    //   this.deleteMarkers();
-    //   snapshotToArray(resp).forEach(data => 
-    //   {
-    //     if(data.uuid !== this.device.uuid) {
-    //       let image = 'assets/imgs/location2.png';
-    //       let updatelocation = new google.maps.LatLng(data.latitude,data.longitude);
-    //       this.addMarker(updatelocation,image);
-    //       this.setMapOnAll(this.map);
-    //     } else {
-    //       let image = 'assets/imgs/location2.png';
-    //       let updatelocation = new google.maps.LatLng(data.latitude,data.longitude);
-    //       this.addMarker(updatelocation,image);
-    //       this.setMapOnAll(this.map);
-    //     }
-    //   });
-    // });
-
-
-  // this.sim.hasReadPermission().then(
-  //   (info) => console.log('Has permission: ', info)
-  // );
-  
-  // this.sim.requestReadPermission().then(
-  //   () => console.log('Permission granted'),
-  //   () => console.log('Permission denied')
-  // );
-    })
+    // platform.ready().then(() => {
+      
+    // })
   }
   
   //functions
-  
   gotToAdmin2()
-  {  var data ;
+  {  
+    var tempMobileNo = this.trackMobileNo;
     this.ref.on("value", function(snapshot) 
     {
-     // data = snapshot.val();
-      localStorage.setItem('cord',snapshot.val());
-      console.log(snapshot.val());
+       var tempCords = snapshot.val()[tempMobileNo];
+
+       if(tempCords)
+       {
+        localStorage.setItem('latitude',tempCords.latitude);
+        localStorage.setItem('longitude',tempCords.longitude);
+        
+       }
+      
+     // console.log(snapshot.val());
     }, function (error) {
       console.log("Error: " + error.code);
    });
+   
 
-
-   var tempCord = localStorage.getItem('cord');
-
-      var tempKey = Object.keys(tempCord);
-      var currentUser = localStorage.getItem('mobId');
-      tempKey.forEach(function(element)
-      { 
-        console.log(element,currentUser);
-        if(currentUser == element)
-        {
-         this.initMap(tempCord[element].latitude,tempCord[element].longitude) 
-          return false;
-        }else
-        {
-          console.log('Unable to getting location');
-        }
-      })
-
-
-
-
-    // this.initMap()
-    //console.log('called');
+   //console.log(this.trackMobileNo);
+   var latitude = localStorage.getItem('latitude');
+   var longitude = localStorage.getItem('longitude'); 
+   this.initMap(latitude,longitude)
+    
    // this.navCtrl.push(AdminPage)
   }
 

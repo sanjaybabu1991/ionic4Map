@@ -9,14 +9,15 @@
  <ion-list >
     <ion-item>
       <ion-label floating>Mobile No.</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input type="number" [(ngModel)]="trackMobileNo"></ion-input>
+      
     </ion-item>
     <br /><br />
     <!-- <button ion-button block>Track</button> -->
     <button ion-button (click) = "gotToAdmin2()">Track</button>
     {{temp}}
   </ion-list> 
-
+  {{trackMobileNo}}
   
     <!-- map -->
   <div #map id="map" style="height: 100%;"></div>
