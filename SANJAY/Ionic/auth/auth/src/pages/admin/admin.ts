@@ -55,8 +55,6 @@ export class AdminPage
   }
 
 
-
-
   initMap(latitude,longitude) 
   { 
     console.log('initMap');

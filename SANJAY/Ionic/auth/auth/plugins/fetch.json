@@ -24,5 +24,13 @@
     "variables": {
       "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
     }
+  },
+  "cordova-plugin-app-update": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-update"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
