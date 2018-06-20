@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-//import { IonicPageModule } from 'ionic-angular';
+import { IonicPageModule } from 'ionic-angular';
 
 //import { AdminPage } from './admin';
 import { AdminPage } from './admin';
@@ -7,9 +7,9 @@ import { AdminPage } from './admin';
   declarations: [
     AdminPage,
   ],
-  // imports: [
-  //   IonicPageModule.forChild(AdminPage),
-  // ],
+  imports: [
+    IonicPageModule.forChild(AdminPage),
+  ],
   exports: [
     AdminPage
   ]

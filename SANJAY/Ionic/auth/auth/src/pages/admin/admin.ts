@@ -13,54 +13,49 @@ declare var google: any;
   templateUrl: 'admin.html',
 })
 export class AdminPage 
-{
-  trackMobileNo;
-    
+{   
   @ViewChild('map') mapElement: ElementRef;
   map: any;
   temp : any;
-  
+  trackMobileNo; 
   markers = [];
   ref = firebase.database().ref('geolocations/');
   
-  public simInfo: any;
-  public cards: any;
+  // public simInfo: any;
+  // public cards: any;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,private device: Device) 
   {
-    // platform.ready().then(() => {
+    platform.ready().then(() => {
       
-    // })
+    })
   }
   
   //functions
   gotToAdmin2()
   {  
     var tempMobileNo = this.trackMobileNo;
+    var tempCords =null ;
+    //get data from server
     this.ref.on("value", function(snapshot) 
     {
-       var tempCords = snapshot.val()[tempMobileNo];
-
-       if(tempCords)
-       {
-        localStorage.setItem('latitude',tempCords.latitude);
-        localStorage.setItem('longitude',tempCords.longitude);
-        
-       }
-      
-     // console.log(snapshot.val());
-    }, function (error) {
-      console.log("Error: " + error.code);
-   });
-   
-
-   //console.log(this.trackMobileNo);
-   var latitude = localStorage.getItem('latitude');
-   var longitude = localStorage.getItem('longitude'); 
-   this.initMap(latitude,longitude)
+      tempCords = snapshot.val()[tempMobileNo]; 
     
+    },function (error) 
+    {
+      console.log("Error: " + error.code);
+    });
+   
+    setTimeout(function()
+    {  
+      this.initMap(tempCords.latitude,tempCords.longitude);
+    }.bind(this),3000);
+   
    // this.navCtrl.push(AdminPage)
   }
+
+
+
 
   initMap(latitude,longitude) 
   { 
@@ -77,12 +72,12 @@ export class AdminPage
         console.log(err);
       });;
     });
+
     let watch = this.geolocation.watchPosition();
 
     watch.subscribe((data) => {
       this.deleteMarkers();
-      //this.updateGeolocation(this.device.uuid, latitude,longitude);
-      
+      //this.updateGeolocation(this.device.uuid, latitude,longitude);  
       let updatelocation = new google.maps.LatLng(latitude,longitude);
       let image = 'assets/imgs/location2.png';
       this.addMarker(updatelocation,image);
@@ -117,38 +112,41 @@ export class AdminPage
   }
 
   //from update firebase
-  updateGeolocation(uuid, lat, lng) 
-  {
-   // console.log(localStorage.getItem('mykey'));
-      let userId = '9575353073';
-      let pass = 1234;
-    if(localStorage.getItem('mykey')) 
-    { 
-      firebase.database().ref('geolocations/'+userId).set({
-        uuid: uuid,
-        latitude: lat,
-        longitude : lng,
-        userId:userId,
-        pass:pass,
-        time: new Date().getTime()
-      });
-    }else 
-    {
-      //console.log('not found');
-      let newData = this.ref.push();
-      newData.set({
-        uuid: uuid,
-        latitude: lat,
-        longitude: lng,
-        userId:userId,
-        pass:pass,
-        time: new Date().getTime()
+  // updateGeolocation(uuid, lat, lng) 
+  // {
+  //  // console.log(localStorage.getItem('mykey'));
+  //     let userId = '9575353073';
+  //     let pass = 1234;
+  //   if(localStorage.getItem('mykey')) 
+  //   { 
+  //     firebase.database().ref('geolocations/'+userId).set({
+  //       uuid: uuid,
+  //       latitude: lat,
+  //       longitude : lng,
+  //       userId:userId,
+  //       pass:pass,
+  //       time: new Date().getTime()
+  //     });
+  //   }else 
+  //   {
+  //     //console.log('not found');
+  //     let newData = this.ref.push();
+  //     newData.set({
+  //       uuid: uuid,
+  //       latitude: lat,
+  //       longitude: lng,
+  //       userId:userId,
+  //       pass:pass,
+  //       time: new Date().getTime()
         
-      });
-      localStorage.setItem('mykey',userId)
-    }
-  } 
+  //     });
+  //     localStorage.setItem('mykey',userId)
+  //   }
+  // } 
 }
+
+
+
 export const snapshotToArray = snapshot => 
 {
   let returnArr = [];

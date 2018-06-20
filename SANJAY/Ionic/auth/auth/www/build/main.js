@@ -30,8 +30,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 //@IonicPage()
 var AdminPage = /** @class */ (function () {
+    // public simInfo: any;
+    // public cards: any;
     function AdminPage(navCtrl, navParams, platform, geolocation, device) {
-        // platform.ready().then(() => {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.platform = platform;
@@ -39,25 +40,22 @@ var AdminPage = /** @class */ (function () {
         this.device = device;
         this.markers = [];
         this.ref = __WEBPACK_IMPORTED_MODULE_4_firebase__["database"]().ref('geolocations/');
-        // })
+        platform.ready().then(function () {
+        });
     }
     //functions
     AdminPage.prototype.gotToAdmin2 = function () {
         var tempMobileNo = this.trackMobileNo;
+        var tempCords = null;
+        //get data from server
         this.ref.on("value", function (snapshot) {
-            var tempCords = snapshot.val()[tempMobileNo];
-            if (tempCords) {
-                localStorage.setItem('latitude', tempCords.latitude);
-                localStorage.setItem('longitude', tempCords.longitude);
-            }
-            // console.log(snapshot.val());
+            tempCords = snapshot.val()[tempMobileNo];
         }, function (error) {
             console.log("Error: " + error.code);
         });
-        //console.log(this.trackMobileNo);
-        var latitude = localStorage.getItem('latitude');
-        var longitude = localStorage.getItem('longitude');
-        this.initMap(latitude, longitude);
+        setTimeout(function () {
+            this.initMap(tempCords.latitude, tempCords.longitude);
+        }.bind(this), 3000);
         // this.navCtrl.push(AdminPage)
     };
     AdminPage.prototype.initMap = function (latitude, longitude) {
@@ -76,7 +74,7 @@ var AdminPage = /** @class */ (function () {
         var watch = this.geolocation.watchPosition();
         watch.subscribe(function (data) {
             _this.deleteMarkers();
-            //this.updateGeolocation(this.device.uuid, latitude,longitude);
+            //this.updateGeolocation(this.device.uuid, latitude,longitude);  
             var updatelocation = new google.maps.LatLng(latitude, longitude);
             var image = 'assets/imgs/location2.png';
             _this.addMarker(updatelocation, image);
@@ -104,35 +102,6 @@ var AdminPage = /** @class */ (function () {
     AdminPage.prototype.deleteMarkers = function () {
         this.clearMarkers();
         this.markers = [];
-    };
-    //from update firebase
-    AdminPage.prototype.updateGeolocation = function (uuid, lat, lng) {
-        // console.log(localStorage.getItem('mykey'));
-        var userId = '9575353073';
-        var pass = 1234;
-        if (localStorage.getItem('mykey')) {
-            __WEBPACK_IMPORTED_MODULE_4_firebase__["database"]().ref('geolocations/' + userId).set({
-                uuid: uuid,
-                latitude: lat,
-                longitude: lng,
-                userId: userId,
-                pass: pass,
-                time: new Date().getTime()
-            });
-        }
-        else {
-            //console.log('not found');
-            var newData = this.ref.push();
-            newData.set({
-                uuid: uuid,
-                latitude: lat,
-                longitude: lng,
-                userId: userId,
-                pass: pass,
-                time: new Date().getTime()
-            });
-            localStorage.setItem('mykey', userId);
-        }
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
