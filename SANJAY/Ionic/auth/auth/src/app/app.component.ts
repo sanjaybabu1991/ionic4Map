@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { TabsPage } from '../pages/tabs/tabs';
+//import { TabsPage } from '../pages/tabs/tabs';
 import { Login } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
-//import { AdminPage } from '../admin/admin';
+//import { AdminPage } from '../pages/admin/admin'
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
-//sim
 
-import firebase, { database } from 'firebase';
+import firebase from 'firebase';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   
-    rootPage:any = TabsPage;
+    rootPage:any = Login;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private geolocation: Geolocation,private device: Device) 
   {
@@ -33,13 +33,13 @@ export class MyApp {
         
         firebase.auth().onAuthStateChanged((user) => 
         {
-            if (!user) {
+            if(!user) 
+            {
                 console.log("not login");
                 this.rootPage = Login;
-
-            } else {
-                
-                //console.log("login");
+            }else 
+            {   
+                console.log("login");
                 var database = firebase.database();
                 var ref  = database.ref('userProfile');
                 
@@ -58,8 +58,6 @@ export class MyApp {
                     })
 
                     
-
-                    //////
                 }, function (error) {
                   console.log("Error: " + error.code);
                 });
@@ -85,44 +83,34 @@ export class MyApp {
         });
     }
 
-
     updateGeolocation(uuid, lat, lng) 
     {
-     // console.log(localStorage.getItem('mykey'));
+        // console.log(localStorage.getItem('mykey'));
         let userId = localStorage.getItem('mobId');
        // let pass = 1234;
-      if(userId) 
-      { 
-        firebase.database().ref('geolocations/'+userId).set({
-          uuid: uuid,
-          latitude: lat,
-          longitude : lng,
-          time: new Date().getTime()
-        });
-      }else 
-      {
-        console.log('not found');
-        var database = firebase.database();
-        var ref  = database.ref('geolocations/'+userId);
-        let newData = ref.push();
-          newData.set({
-          uuid: uuid,
-          latitude: lat,
-          longitude: lng,
-          time: new Date().getTime()
-          
-        });
-       // localStorage.setItem('mykey',userId)
-      }
-    } 
-
-
-
-
-
-
-
-
-////    
+        if(userId) 
+        { 
+            firebase.database().ref('geolocations/'+userId).set({
+                uuid: uuid,
+                latitude: lat,
+                longitude : lng,
+                time: new Date().getTime()
+            });
+        }else 
+        {
+            console.log('not found');
+            var database = firebase.database();
+            var ref  = database.ref('geolocations/'+userId);
+            let newData = ref.push();
+            newData.set({
+            uuid: uuid,
+            latitude: lat,
+            longitude: lng,
+            time: new Date().getTime()
+            
+            });
+        // localStorage.setItem('mykey',userId)
+        }
+} 
 }
 

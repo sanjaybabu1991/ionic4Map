@@ -28,7 +28,7 @@
   "cordova-plugin-app-update": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-app-update"
+      "id": "cordova-plugin-app-update@^1.6.0"
     },
     "is_top_level": true,
     "variables": {}

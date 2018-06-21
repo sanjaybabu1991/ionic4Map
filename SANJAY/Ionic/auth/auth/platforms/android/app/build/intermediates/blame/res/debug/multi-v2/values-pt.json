@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "map": [
+                {
+                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-pt/appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "488,693,622,552,423,372,821,769,949,55,186,128,267,323",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "547,763,688,617,483,418,944,816,996,123,262,181,318,367"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,119,194,265,335,400,451,579,631,683,756,837,895,951",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "114,189,260,330,395,446,574,626,678,751,832,890,946,995"
+                    }
+                }
+            ]
+        }
+    ]
+}

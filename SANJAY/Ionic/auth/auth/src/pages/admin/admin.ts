@@ -2,6 +2,8 @@ import { Component, ViewChild, ElementRef  } from '@angular/core';
 import { Platform, NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
+import { AuthData } from '../../providers/auth-data';
+import { Login } from '../login/login';
 //sim
 //import { Sim } from '@ionic-native/sim';
 import * as firebase from 'firebase';
@@ -24,7 +26,7 @@ export class AdminPage
   // public simInfo: any;
   // public cards: any;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,private device: Device) 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, private geolocation: Geolocation,public authData: AuthData,private device: Device) 
   {
     platform.ready().then(() => {
       
@@ -47,29 +49,42 @@ export class AdminPage
     });
    
     setTimeout(function()
-    {  
-      this.initMap(tempCords.latitude,tempCords.longitude);
+    { 
+      if(tempCords != null)
+      {
+        this.initMap(tempCords.latitude,tempCords.longitude);
+      }else
+      {
+        alert('Sorry, Unable to track location');
+      } 
+      
     }.bind(this),3000);
    
    // this.navCtrl.push(AdminPage)
   }
-
-
+ 
+  //logout
+  logOut() {
+    this.authData.logoutUser().then(() => {
+        this.navCtrl.setRoot(Login);
+    });
+   }
   initMap(latitude,longitude) 
   { 
     console.log('initMap');
+
+    ///
     this.geolocation.getCurrentPosition({ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }).then((resp) => 
     {
-          
       let mylocation = new google.maps.LatLng(latitude,longitude);
       this.map = new google.maps.Map(this.mapElement.nativeElement, 
       {
         zoom: 15,
         center: mylocation
       },(err) => {
-        console.log(err);
-      });;
-    });
+        alert(err);
+      })
+    })
 
     let watch = this.geolocation.watchPosition();
 

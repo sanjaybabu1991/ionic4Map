@@ -1,8 +1,13 @@
 
 <ion-header>
-  <ion-navbar color="primary">
+  
+  <ion-navbar hideBackButton="true" color="primary">
+    
     <ion-title>Live Track</ion-title>
   </ion-navbar>
+
+  <button ion-button small color="danger" (click)="logOut()" float-right><ion-icon name="power"></ion-icon>
+  </button>
 </ion-header>
 
 <ion-content padding>
@@ -14,7 +19,7 @@
     </ion-item>
     <br /><br />
     <!-- <button ion-button block>Track</button> -->
-    <button ion-button (click) = "gotToAdmin2()">Track</button>
+    <button ion-button (click)="gotToAdmin2()">Track</button>
   </ion-list> 
  
   

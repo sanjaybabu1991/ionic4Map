@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values/appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "463,666,597,527,404,355,791,738,913,55,180,128,256,309",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "522,732,661,592,458,399,908,786,960,123,251,175,304,350"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "162,226,297,366,495,554,603,725,778,830,903,979,1031,1084",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "221,292,361,431,549,598,720,773,825,898,974,1026,1079,1125"
+                    }
+                },
+                {
+                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,55,98",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "216,93,152"
+                    },
+                    "to": {
+                        "startLines": "2,3,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,436",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "114,157,490"
+                    }
+                }
+            ]
+        }
+    ]
+}
