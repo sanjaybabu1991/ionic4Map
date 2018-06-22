@@ -1,16 +1,38 @@
 {
     "logs": [
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-it/appupdate_strings.xml",
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-it\\appupdate_strings.xml",
                     "from": {
                         "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
                         "startOffsets": "493,715,644,572,432,382,845,791,958,55,197,136,276,331",
                         "endColumns": "78,74,70,71,60,49,112,53,51,80,78,60,54,50",
                         "endOffsets": "567,785,710,639,488,427,953,840,1005,131,271,192,326,377"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,134,209,280,352,413,463,576,630,682,763,842,903,958",
+                        "endColumns": "78,74,70,71,60,49,112,53,51,80,78,60,54,50",
+                        "endOffsets": "129,204,275,347,408,458,571,625,677,758,837,898,953,1004"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-it\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "502,727,655,582,440,389,860,805,974,57,201,139,281,337",
+                        "endColumns": "78,74,70,71,60,49,112,53,51,80,78,60,54,50",
+                        "endOffsets": "576,797,721,649,496,434,968,854,1021,133,275,195,331,383"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",

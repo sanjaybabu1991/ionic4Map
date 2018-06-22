@@ -1,10 +1,32 @@
 {
     "logs": [
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat",
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-zh_values-zh.arsc.flat",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-es/appupdate_strings.xml",
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-zh\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "512,452,394,348,302,625,574,694,57,155,108,209,259",
+                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
+                        "endOffsets": "566,506,446,388,342,688,619,742,102,203,149,253,296"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,173,230,275,320,388,438,491,541,594,640,689",
+                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
+                        "endOffsets": "109,168,225,270,315,383,433,486,536,589,635,684,726"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-es_values-es.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-es\\appupdate_strings.xml",
                     "from": {
                         "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,32 +45,10 @@
             ]
         },
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-en_values-en.arsc.flat",
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-it_values-it.arsc.flat",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-en/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "463,666,597,527,404,355,791,738,913,55,180,128,256,309",
-                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
-                        "endOffsets": "522,732,661,592,458,399,908,786,960,123,251,175,304,350"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,119,190,259,329,388,437,559,612,664,737,813,865,918",
-                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
-                        "endOffsets": "114,185,254,324,383,432,554,607,659,732,808,860,913,959"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-it/appupdate_strings.xml",
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-it\\appupdate_strings.xml",
                     "from": {
                         "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -67,142 +67,10 @@
             ]
         },
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat",
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-bn_values-bn.arsc.flat",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-pl/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "482,684,613,550,427,378,808,756,924,55,183,124,269,326",
-                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
-                        "endOffsets": "545,750,679,608,477,422,919,803,971,119,264,178,321,373"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,123,194,265,328,383,432,548,600,652,721,807,866,923",
-                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
-                        "endOffsets": "118,189,260,323,378,427,543,595,647,716,802,861,918,970"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-ru/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "467,676,607,534,413,364,804,750,892,55,184,126,260,315",
-                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
-                        "endOffsets": "529,744,671,602,462,408,887,799,939,121,255,179,310,359"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,122,195,264,337,391,440,528,582,634,705,781,839,894",
-                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
-                        "endOffsets": "117,190,259,332,386,435,523,577,629,700,776,834,889,938"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-fr/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "668,599,526,455,405,800,746,917,55,205,143,289,347",
-                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
-                        "endOffsets": "740,663,594,521,450,912,795,964,138,284,200,342,400"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,132,201,274,345,395,512,566,618,706,790,852,910",
-                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
-                        "endOffsets": "127,196,269,340,390,507,561,613,701,785,847,905,963"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-pt/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "488,693,622,552,423,372,821,769,949,55,186,128,267,323",
-                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
-                        "endOffsets": "547,763,688,617,483,418,944,816,996,123,262,181,318,367"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,119,194,265,335,400,451,579,631,683,756,837,895,951",
-                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
-                        "endOffsets": "114,189,260,330,395,446,574,626,678,751,832,890,946,995"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-zh_values-zh.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-zh/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "501,442,385,340,295,611,561,679,55,151,105,204,253",
-                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
-                        "endOffsets": "555,496,437,380,335,674,606,727,100,199,146,248,290"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,173,230,275,320,388,438,491,541,594,640,689",
-                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
-                        "endOffsets": "109,168,225,270,315,383,433,486,536,589,635,684,726"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-ko/appupdate_strings.xml",
-                    "from": {
-                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "404,580,518,458,355,310,695,645,779,55,156,106,212,263",
-                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
-                        "endOffsets": "453,639,575,513,399,350,774,690,826,101,207,151,258,305"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,109,173,235,295,344,389,473,523,575,626,682,732,783",
-                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
-                        "endOffsets": "104,168,230,290,339,384,468,518,570,621,677,727,778,825"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-bn/appupdate_strings.xml",
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-bn\\appupdate_strings.xml",
                     "from": {
                         "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -221,10 +89,313 @@
             ]
         },
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat",
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-ru_values-ru.arsc.flat",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values-de/appupdate_strings.xml",
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-ru\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "467,676,607,534,413,364,804,750,892,55,184,126,260,315",
+                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
+                        "endOffsets": "529,744,671,602,462,408,887,799,939,121,255,179,310,359"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,122,195,264,337,391,440,528,582,634,705,781,839,894",
+                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
+                        "endOffsets": "117,190,259,332,386,435,523,577,629,700,776,834,889,938"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-ko_values-ko.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-ko\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "404,580,518,458,355,310,695,645,779,55,156,106,212,263",
+                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
+                        "endOffsets": "453,639,575,513,399,350,774,690,826,101,207,151,258,305"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,109,173,235,295,344,389,473,523,575,626,682,732,783",
+                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
+                        "endOffsets": "104,168,230,290,339,384,468,518,570,621,677,727,778,825"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-de_values-de.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-de\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "656,580,504,436,383,789,734,910,57,190,131,273,327",
+                        "endColumns": "74,74,74,66,51,119,53,51,72,81,57,52,54",
+                        "endOffsets": "726,650,574,498,430,904,783,957,125,267,184,321,377"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,205,280,347,399,519,573,625,698,780,838,891",
+                        "endColumns": "74,74,74,66,51,119,53,51,72,81,57,52,54",
+                        "endOffsets": "125,200,275,342,394,514,568,620,693,775,833,886,941"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-fr_values-fr.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-fr\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "679,609,535,463,412,814,759,932,57,209,146,294,353",
+                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
+                        "endOffsets": "751,673,603,529,457,926,808,979,140,288,203,347,406"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,201,274,345,395,512,566,618,706,790,852,910",
+                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
+                        "endOffsets": "127,196,269,340,390,507,561,613,701,785,847,905,963"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-it_values-it.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-it\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "502,727,655,582,440,389,860,805,974,57,201,139,281,337",
+                        "endColumns": "78,74,70,71,60,49,112,53,51,80,78,60,54,50",
+                        "endOffsets": "576,797,721,649,496,434,968,854,1021,133,275,195,331,383"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,134,209,280,352,413,463,576,630,682,763,842,903,958",
+                        "endColumns": "78,74,70,71,60,49,112,53,51,80,78,60,54,50",
+                        "endOffsets": "129,204,275,347,408,458,571,625,677,758,837,898,953,1004"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-es_values-es.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-es\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "639,563,492,435,383,771,717,898,57,193,131,274,332",
+                        "endColumns": "74,74,69,55,50,125,52,51,72,79,60,56,49",
+                        "endOffsets": "709,633,557,486,429,892,765,945,125,268,187,326,377"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,205,275,331,382,508,561,613,686,766,827,884",
+                        "endColumns": "74,74,69,55,50,125,52,51,72,79,60,56,49",
+                        "endOffsets": "125,200,270,326,377,503,556,608,681,761,822,879,929"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-zh_values-zh.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-zh\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "501,442,385,340,295,611,561,679,55,151,105,204,253",
+                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
+                        "endOffsets": "555,496,437,380,335,674,606,727,100,199,146,248,290"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,173,230,275,320,388,438,491,541,594,640,689",
+                        "endColumns": "58,58,56,44,44,67,49,52,49,52,45,48,41",
+                        "endOffsets": "109,168,225,270,315,383,433,486,536,589,635,684,726"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pl_values-pl.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-pl\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "482,684,613,550,427,378,808,756,924,55,183,124,269,326",
+                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
+                        "endOffsets": "545,750,679,608,477,422,919,803,971,119,264,178,321,373"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,194,265,328,383,432,548,600,652,721,807,866,923",
+                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
+                        "endOffsets": "118,189,260,323,378,427,543,595,647,716,802,861,918,970"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-bn_values-bn.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-bn\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "500,701,628,561,423,370,830,775,937,57,187,132,258,316",
+                        "endColumns": "59,70,71,65,75,51,105,53,55,73,69,53,56,52",
+                        "endOffsets": "555,767,695,622,494,417,931,824,988,126,252,181,310,364"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,186,258,324,400,452,558,612,668,742,812,866,923",
+                        "endColumns": "59,70,71,65,75,51,105,53,55,73,69,53,56,52",
+                        "endOffsets": "110,181,253,319,395,447,553,607,663,737,807,861,918,971"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pt_values-pt.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-pt\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "497,705,633,562,431,379,836,783,965,57,190,131,272,329",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "556,775,699,627,491,425,959,830,1012,125,266,184,323,373"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,119,194,265,335,400,451,579,631,683,756,837,895,951",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "114,189,260,330,395,446,574,626,678,751,832,890,946,995"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-en_values-en.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-en\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "463,666,597,527,404,355,791,738,913,55,180,128,256,309",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "522,732,661,592,458,399,908,786,960,123,251,175,304,350"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,119,190,259,329,388,437,559,612,664,737,813,865,918",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "114,185,254,324,383,432,554,607,659,732,808,860,913,959"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pt_values-pt.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-pt\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "488,693,622,552,423,372,821,769,949,55,186,128,267,323",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "547,763,688,617,483,418,944,816,996,123,262,181,318,367"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,119,194,265,335,400,451,579,631,683,756,837,895,951",
+                        "endColumns": "63,74,70,69,64,50,127,51,51,72,80,57,55,48",
+                        "endOffsets": "114,189,260,330,395,446,574,626,678,751,832,890,946,995"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,55,98",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "216,93,152"
+                    },
+                    "to": {
+                        "startLines": "2,3,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,436",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "114,157,490"
+                    }
+                },
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "472,678,608,537,412,362,806,752,929,57,184,131,261,315",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "531,744,672,602,466,406,923,800,976,125,255,178,309,356"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "162,226,297,366,495,554,603,725,778,830,903,979,1031,1084",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "221,292,361,431,549,598,720,773,825,898,974,1026,1079,1125"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-de_values-de.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-de\\appupdate_strings.xml",
                     "from": {
                         "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -243,10 +414,49 @@
             ]
         },
         {
-            "outputFile": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pl_values-pl.arsc.flat",
             "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values/appupdate_strings.xml",
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-pl\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "491,696,624,560,435,385,823,770,940,57,187,127,274,332",
+                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
+                        "endOffsets": "554,762,690,618,485,429,934,817,987,121,268,181,326,379"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,194,265,328,383,432,548,600,652,721,807,866,923",
+                        "endColumns": "67,70,70,62,54,48,115,51,51,68,85,58,56,51",
+                        "endOffsets": "118,189,260,323,378,427,543,595,647,716,802,861,918,970"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,55,98",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "216,93,152"
+                    },
+                    "to": {
+                        "startLines": "2,3,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,436",
+                        "endColumns": "63,42,58",
+                        "endOffsets": "114,157,490"
+                    }
+                },
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values\\appupdate_strings.xml",
                     "from": {
                         "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -261,22 +471,93 @@
                         "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
                         "endOffsets": "221,292,361,431,549,598,720,773,825,898,974,1026,1079,1125"
                     }
-                },
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-ru_values-ru.arsc.flat",
+            "map": [
                 {
-                    "source": "/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/res/values/strings.xml",
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-ru\\appupdate_strings.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "157,55,98",
-                        "endColumns": "63,42,58",
-                        "endOffsets": "216,93,152"
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "476,688,618,544,421,371,819,764,908,57,188,129,265,321",
+                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
+                        "endOffsets": "538,756,682,612,470,415,902,813,955,123,259,182,315,365"
                     },
                     "to": {
-                        "startLines": "2,3,8",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,119,436",
-                        "endColumns": "63,42,58",
-                        "endOffsets": "114,157,490"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,122,195,264,337,391,440,528,582,634,705,781,839,894",
+                        "endColumns": "66,72,68,72,53,48,87,53,51,70,75,57,54,48",
+                        "endOffsets": "117,190,259,332,386,435,523,577,629,700,776,834,889,938"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-en_values-en.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-en\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "472,678,608,537,412,362,806,752,929,57,184,131,261,315",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "531,744,672,602,466,406,923,800,976,125,255,178,309,356"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,119,190,259,329,388,437,559,612,664,737,813,865,918",
+                        "endColumns": "63,70,68,69,58,48,121,52,51,72,75,51,52,45",
+                        "endOffsets": "114,185,254,324,383,432,554,607,659,732,808,860,913,959"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-fr_values-fr.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\home\\creates11\\SANJAY\\Ionic\\track\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-fr\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "11,10,9,8,7,14,13,15,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "668,599,526,455,405,800,746,917,55,205,143,289,347",
+                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
+                        "endOffsets": "740,663,594,521,450,912,795,964,138,284,200,342,400"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,201,274,345,395,512,566,618,706,790,852,910",
+                        "endColumns": "76,68,72,70,49,116,53,51,87,83,61,57,57",
+                        "endOffsets": "127,196,269,340,390,507,561,613,701,785,847,905,963"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-ko_values-ko.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\src\\main\\res\\values-ko\\appupdate_strings.xml",
+                    "from": {
+                        "startLines": "9,12,11,10,8,7,15,14,16,2,4,3,5,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "413,592,529,468,363,317,710,659,795,57,160,109,217,269",
+                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
+                        "endOffsets": "462,651,586,523,407,357,789,704,842,103,211,154,263,311"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,109,173,235,295,344,389,473,523,575,626,682,732,783",
+                        "endColumns": "53,63,61,59,48,44,83,49,51,50,55,49,50,46",
+                        "endOffsets": "104,168,230,290,339,384,468,518,570,621,677,727,778,825"
                     }
                 }
             ]

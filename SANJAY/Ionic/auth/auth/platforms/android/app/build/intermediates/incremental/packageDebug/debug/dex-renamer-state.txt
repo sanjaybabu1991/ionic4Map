@@ -1,4 +1,4 @@
-#Thu Jun 21 13:45:50 IST 2018
-base.0=/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Fri Jun 22 15:27:58 IST 2018
+base.0=D\:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=/home/creates11/SANJAY/Ionic/track/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
+file.0=D\:\\SANJAYAPP\\PROJECT\\ionic4Map\\SANJAY\\Ionic\\auth\\auth\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
