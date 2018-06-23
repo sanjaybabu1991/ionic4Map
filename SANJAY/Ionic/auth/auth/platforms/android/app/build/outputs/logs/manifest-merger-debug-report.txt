@@ -1,25 +1,13 @@
 -- Merging decision tree log ---
-provider#com.vaenow.appupdate.android.GenericFileProvider
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:12:9-14:20
-	android:grantUriPermissions
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:12:102-136
-	android:authorities
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:12:19-76
-	android:exported
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:12:77-101
-	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:12:137-200
 manifest
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:17:1-27:12
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
 MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
 	package
 		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:98-124
 		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
@@ -55,9 +43,7 @@ ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\andro
 	android:name
 		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:5-15:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:25:5-20
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:5-12:19
 	android:supportsRtl
 		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
 	android:label
@@ -93,44 +79,22 @@ ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\andro
 	android:name
 		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
 uses-sdk
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:21:5-23:54
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:5-74
 MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
-	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\67112c70734c80977650ab23a7dab5e1\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:42-71
+		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:42-71
 	android:minSdkVersion
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:15-41
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:17:5-81
-	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:17:22-78
-uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:18:5-84
-	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:18:22-81
+		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:15-41
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:19:5-81
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:20:5-79
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:20:22-76
+		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:15:22-76
 uses-feature#android.hardware.location.gps
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:21:5-66
+ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:5-66
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:21:19-63
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:22:5-75
-	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:22:22-72
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:13-117
-	android:resource
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:75-114
-	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:24-74
+		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:19-63
