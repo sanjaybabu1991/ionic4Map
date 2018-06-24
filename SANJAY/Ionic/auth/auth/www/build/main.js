@@ -60,6 +60,7 @@ var AdminPage = /** @class */ (function () {
         });
         setTimeout(function () {
             if (tempCords != null) {
+                this.value = 1;
                 this.initMap(tempCords.latitude, tempCords.longitude);
             }
             else {
@@ -122,15 +123,16 @@ var AdminPage = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _a || Object)
     ], AdminPage.prototype, "mapElement", void 0);
     AdminPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-admin',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/'\n\n<ion-header>\n\n  \n\n  <ion-navbar hideBackButton="true" color="primary">\n\n    \n\n    <ion-title>Live Track</ion-title>\n\n  </ion-navbar>\n\n\n\n  <button ion-button small color="danger" (click)="logOut()" float-right><ion-icon name="power"></ion-icon>\n\n  </button>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n <ion-list >\n\n    <ion-item>\n\n      <ion-label floating>Mobile No.</ion-label>\n\n      <ion-input type="number" [(ngModel)]="trackMobileNo"></ion-input>\n\n      \n\n    </ion-item>\n\n    <br /><br />\n\n    <!-- <button ion-button block>Track</button> -->\n\n    <button ion-button (click)="gotToAdmin2()">Track</button>\n\n  </ion-list> \n\n \n\n  \n\n    <!-- map -->\n\n  <div #map id="map" style="height: 100%;"></div>\n\n \n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n    <ion-title><small>Copyright 2018</small></ion-title>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n\n\n\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/,
+            selector: 'page-admin',template:/*ion-inline-start:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/'\n\n<ion-header>\n\n  \n\n  <ion-navbar hideBackButton="true" color="primary">\n\n    \n\n    <ion-title>Live Track</ion-title>\n\n  </ion-navbar>\n\n\n\n  <button ion-button small color="danger" (click)="logOut()" float-right><ion-icon name="power"></ion-icon>\n\n  </button>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n <ion-list [hidden]="value">\n\n    <ion-item>\n\n      <ion-label floating>Mobile No.</ion-label>\n\n      <ion-input type="number" [(ngModel)]="trackMobileNo"></ion-input>\n\n      \n\n    </ion-item>\n\n    <br /><br />\n\n    <!-- <button ion-button block>Track</button> -->\n\n    <button ion-button (click)="gotToAdmin2()">Track</button>\n\n  </ion-list> \n\n \n\n  \n\n    <!-- map -->\n\n  <div #map id="map" style="height: 100%;"></div>\n\n \n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n    <ion-title><small>Copyright 2018</small></ion-title>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n\n\n\n\n'/*ion-inline-end:"D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\src\pages\admin\admin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_data__["a" /* AuthData */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */]) === "function" && _g || Object])
     ], AdminPage);
     return AdminPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 var snapshotToArray = function (snapshot) {

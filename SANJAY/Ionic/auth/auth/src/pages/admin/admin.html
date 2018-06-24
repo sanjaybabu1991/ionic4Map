@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
- <ion-list >
+ <ion-list [hidden]="value">
     <ion-item>
       <ion-label floating>Mobile No.</ion-label>
       <ion-input type="number" [(ngModel)]="trackMobileNo"></ion-input>

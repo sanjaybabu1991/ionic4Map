@@ -30,7 +30,7 @@ export class MyApp {
         messagingSenderId: "766037115636"
     };
         firebase.initializeApp(config);
-        
+       // localStorage.clear()
         firebase.auth().onAuthStateChanged((user) => 
         {
             if(!user) 
@@ -39,7 +39,7 @@ export class MyApp {
                 this.rootPage = Login;
             }else 
             {   
-                console.log("login");
+                console.log(user.email);
                 var database = firebase.database();
                 var ref  = database.ref('userProfile');
                 
@@ -50,9 +50,11 @@ export class MyApp {
                     //console.log(keys);
                     keys.forEach(function(element) 
                     {
-                        if(tempdata[element].mobileNo == element)
+                       
+                        if(tempdata[element].email == user.email)
                         {
-                            localStorage.setItem('mobId',tempdata[element].mobileNo)
+                             console.log(element)
+                            localStorage.setItem('mobId',element)
                             return false; 
                         }
                     })
@@ -62,16 +64,23 @@ export class MyApp {
                   console.log("Error: " + error.code);
                 });
 
-                this.rootPage = HomePage;
-            }
-        });
-        
-        ////update location
+
+
+
+
+
+
+                ////update location
         let watch = this.geolocation.watchPosition();
 
         watch.subscribe((data) => {
             this.updateGeolocation(this.device.uuid, data.coords.latitude,data.coords.longitude);
         })
+                this.rootPage = HomePage;
+            }
+        });
+        
+        
 
         ////////
         platform.ready().then(() => {

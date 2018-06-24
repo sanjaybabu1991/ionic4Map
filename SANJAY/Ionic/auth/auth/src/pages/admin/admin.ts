@@ -51,7 +51,7 @@ export class AdminPage
     setTimeout(function()
     { 
       if(tempCords != null)
-      {
+      {  this.value = 1;
         this.initMap(tempCords.latitude,tempCords.longitude);
       }else
       {
