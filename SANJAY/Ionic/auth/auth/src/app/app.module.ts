@@ -14,6 +14,8 @@ import { IndexPage } from '../pages/index/index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthData } from '../providers/auth-data';
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
@@ -56,6 +58,8 @@ import { Device } from '@ionic-native/device';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BackgroundMode,
+    BackgroundGeolocation,
     Geolocation,
     Device
   //  Sim

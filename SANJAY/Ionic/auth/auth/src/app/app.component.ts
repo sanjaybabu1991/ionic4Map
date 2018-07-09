@@ -6,9 +6,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Login } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 //import { AdminPage } from '../pages/admin/admin'
+import { BackgroundMode } from '@ionic-native/background-mode';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Device } from '@ionic-native/device';
-
+import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 import firebase from 'firebase';
 
 @Component({
@@ -18,19 +19,56 @@ export class MyApp {
   
     rootPage:any = Login;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private geolocation: Geolocation,private device: Device) 
-  {
-      // Initialize Firebase  
-    const config = {
-        apiKey: 'AIzaSyCcc2Hxk2AGI9fLF6y7QC1yxF7UqTjy9gM',
-        authDomain: "geotracker-a4855.firebaseapp.com",
-        databaseURL: "https://geotracker-a4855.firebaseio.com",
-        projectId: "geotracker-a4855",
-        storageBucket: "geotracker-a4855.appspot.com",
-        messagingSenderId: "766037115636"
+    constructor(private backgroundMode: BackgroundMode,private backgroundGeolocation: BackgroundGeolocation, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private geolocation: Geolocation,private device: Device) 
+    {
+        // Initialize Firebase  
+        const config = {
+            apiKey: 'AIzaSyCcc2Hxk2AGI9fLF6y7QC1yxF7UqTjy9gM',
+            authDomain: "geotracker-a4855.firebaseapp.com",
+            databaseURL: "https://geotracker-a4855.firebaseio.com",
+            projectId: "geotracker-a4855",
+            storageBucket: "geotracker-a4855.appspot.com",
+            messagingSenderId: "766037115636"
+        };
+        
+    //     const config2: BackgroundGeolocationConfig = {
+    //         desiredAccuracy: 10,
+    //         stationaryRadius: 20,
+    //         distanceFilter: 30,
+    //         debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+    //         stopOnTerminate: false, // enable this to clear background location settings when the app terminates
+    //     };
+        
+    //     this.backgroundGeolocation.configure(config2).subscribe((location: BackgroundGeolocationResponse) => {
+        
+    //     console.log(location);
+        
+    //     // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+    //     // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+    //     // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+    //    // this.backgroundGeolocation.finish(); // FOR IOS ONLY
+        
+    //     });
+
+
+
+    const config2: BackgroundGeolocationConfig = {
+        desiredAccuracy: 10,
+        
+        stationaryRadius: 20,
+        distanceFilter: 30,
+        interval: 1000,
+        debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+        stopOnTerminate: false, // enable this to clear background location settings when the app terminates
     };
+
+
+
+      //  this.backgroundGeolocation.start();
+
+        //
         firebase.initializeApp(config);
-       // localStorage.clear()
+        // localStorage.clear()
         firebase.auth().onAuthStateChanged((user) => 
         {
             if(!user) 
@@ -38,59 +76,80 @@ export class MyApp {
                 console.log("not login");
                 this.rootPage = Login;
             }else 
-            {   
-                console.log(user.email);
-                var database = firebase.database();
-                var ref  = database.ref('userProfile');
-                
-                ref.on("value", function(data) 
+            {
+
+               
+                        
+                this.backgroundGeolocation.configure(config2).subscribe((location: BackgroundGeolocationResponse) => 
                 {
-                    var tempdata =  data.val();
-                    var keys = Object.keys(tempdata)
-                    //console.log(keys);
-                    keys.forEach(function(element) 
+                  
+                    var database = firebase.database();
+                    var ref  = database.ref('userProfile');
+                
+                    ref.on("value", function(data) 
                     {
-                       
-                        if(tempdata[element].email == user.email)
+                        var tempdata =  data.val();
+                        var keys = Object.keys(tempdata);
+                        keys.forEach(function(element) 
                         {
-                             console.log(element)
-                            localStorage.setItem('mobId',element)
-                            return false; 
-                        }
+                            if(tempdata[element].email == user.email)
+                            {
+                                localStorage.setItem('mobId',element)
+                                return false; 
+                            }
+                        })
+                    },function (error) 
+                    {
+                        console.log("Error: " + error.code);
+                    });
+                    ////update location
+                   let watch = this.geolocation.watchPosition();
+                   watch.subscribe((data) => 
+                   {               console.log(data)
+                      this.updateGeolocation(this.device.uuid, location.latitude,location.longitude);
                     })
 
-                    
-                }, function (error) {
-                  console.log("Error: " + error.code);
+                    //this.updateGeolocation(this.device.uuid, location.latitude,location.longitude);
+                    this.rootPage = HomePage;
+                            //     // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+                            //     // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+                            //     // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+                            //    // this.backgroundGeolocation.finish(); // FOR IOS ONLY
+                                
+                },(err) => 
+                {
+                    alert(err);
+                    console.log(err);             
                 });
 
+          
 
-
-
-
-
-
-                ////update location
-        let watch = this.geolocation.watchPosition();
-
-        watch.subscribe((data) => {
-            this.updateGeolocation(this.device.uuid, data.coords.latitude,data.coords.longitude);
-        })
-                this.rootPage = HomePage;
+                this.backgroundGeolocation.start();
+                // this.backgroundMode.enable();
+                        // this.backgroundGeolocation.start();
             }
         });
         
         
-
-        ////////
-        platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
+        platform.ready().then(() => 
+        {
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+          //  this.backgroundGeolocation.start();
+          
             statusBar.styleDefault();
             splashScreen.hide();
-           // firebase.initializeApp(config);
+       // firebase.initializeApp(config);
         });
+         
+
+        //this.backgroundGeolocation.stop();
+        this.backgroundMode.enable();
     }
+    
+
+    
+    
 
     updateGeolocation(uuid, lat, lng) 
     {

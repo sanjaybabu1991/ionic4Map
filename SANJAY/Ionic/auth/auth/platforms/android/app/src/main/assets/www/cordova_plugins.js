@@ -37,6 +37,14 @@ module.exports = [
     "clobbers": [
       "window.Keyboard"
     ]
+  },
+  {
+    "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeolocation",
+    "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeolocation.js",
+    "pluginId": "cordova-plugin-mauron85-background-geolocation",
+    "clobbers": [
+      "backgroundGeolocation"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -47,7 +55,8 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-ionic-webview": "1.1.19",
-  "cordova-plugin-ionic-keyboard": "2.0.5"
+  "cordova-plugin-ionic-keyboard": "2.0.5",
+  "cordova-plugin-mauron85-background-geolocation": "2.3.5"
 };
 // BOTTOM OF METADATA
 });

@@ -1,100 +1,296 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/e71517013ee64ebe82e5a3949390ce2f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/b22e9d9552b2a74877da52abbd733ec8/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:17:1-27:12
+MERGED from [:CordovaLib] /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/437ce26940cf9c5a8c504627f0083c3b/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-fragment:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/805c38d8e16ca2c158e741d807a6d5ff/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/8a8ba4fc3cba2e2e8b9e3d3acce1f5c4/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/67a1427b158f7bd1472891a985975f8b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/8f13fa287f5c9d74a6aeeee485ac486a/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/7a891924e139e46a03802b096cceb384/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/64d8e728c3cf1832ded5e6e1764d1d81/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/7504a7a9aaf53dc44f8a3c0a06ae4ecc/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/9eeaa898694294dd3ea9e1e468c24769/AndroidManifest.xml:2:1-6:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
 	package
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:98-124
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:70-97
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:70-97
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
 	android:hardwareAccelerated
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:125-183
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:125-183
 	android:versionCode
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:2:46-69
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:2:46-69
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml
 supports-screens
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:5-191
 	android:largeScreens
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:49-76
 	android:smallScreens
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:132-159
 	android:normalScreens
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:77-105
 	android:xlargeScreens
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:160-188
 	android:resizeable
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:106-131
 	android:anyDensity
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:3:23-48
 uses-permission#android.permission.INTERNET
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:5-12:19
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:5:5-32:19
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/e71517013ee64ebe82e5a3949390ce2f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/e71517013ee64ebe82e5a3949390ce2f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/b22e9d9552b2a74877da52abbd733ec8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/b22e9d9552b2a74877da52abbd733ec8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/437ce26940cf9c5a8c504627f0083c3b/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/437ce26940cf9c5a8c504627f0083c3b/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/805c38d8e16ca2c158e741d807a6d5ff/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/805c38d8e16ca2c158e741d807a6d5ff/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/8a8ba4fc3cba2e2e8b9e3d3acce1f5c4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/8a8ba4fc3cba2e2e8b9e3d3acce1f5c4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/67a1427b158f7bd1472891a985975f8b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/67a1427b158f7bd1472891a985975f8b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/8f13fa287f5c9d74a6aeeee485ac486a/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/8f13fa287f5c9d74a6aeeee485ac486a/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/7a891924e139e46a03802b096cceb384/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/7a891924e139e46a03802b096cceb384/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/64d8e728c3cf1832ded5e6e1764d1d81/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/64d8e728c3cf1832ded5e6e1764d1d81/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/7504a7a9aaf53dc44f8a3c0a06ae4ecc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/7504a7a9aaf53dc44f8a3c0a06ae4ecc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/9eeaa898694294dd3ea9e1e468c24769/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/9eeaa898694294dd3ea9e1e468c24769/AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:81-113
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:5:81-113
 	android:hardwareAccelerated
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:5:53-80
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
 activity#io.ionic.starter.MainActivity
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:97-134
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
 	android:launchMode
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:135-165
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:135-165
 	android:windowSoftInputMode
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:257-299
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:257-299
 	android:configChanges
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:19-96
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:19-96
 	android:theme
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:194-256
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:194-256
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:6:166-193
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:6:166-193
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
 	android:label
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
 action#android.intent.action.MAIN
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+meta-data#com.google.android.gms.version
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:12:9-122
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:12:66-119
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:12:20-65
+service#com.marianhello.bgloc.sync.SyncService
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:13:9-18:19
+	android:process
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:13:96-119
+	android:exported
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:13:18-41
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:13:42-95
+intent-filter#android.content.SyncAdapter
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:14:13-16:29
+action#android.content.SyncAdapter
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:15:17-70
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:15:25-67
+meta-data#android.content.SyncAdapter
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:17:13-105
+	android:resource
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:17:67-102
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:17:24-66
+service#com.marianhello.bgloc.sync.AuthenticatorService
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:19:9-24:19
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:19:18-80
+intent-filter#android.accounts.AccountAuthenticator
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
+action#android.accounts.AccountAuthenticator
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:21:17-80
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:21:25-77
+meta-data#android.accounts.AccountAuthenticator
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:23:13-117
+	android:resource
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:23:77-114
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:23:24-76
+provider#com.marianhello.bgloc.sync.DummyContentProvider
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:25:9-181
+	android:authorities
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:25:19-66
+	android:syncable
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:25:155-178
+	android:exported
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:25:67-91
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:25:92-154
+service#com.marianhello.bgloc.LocationService
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:26:9-121
+	android:enabled
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:26:18-40
+	android:exported
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:26:41-65
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:26:66-118
+receiver#com.marianhello.bgloc.BootCompletedReceiver
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:27:9-31:20
+	android:enabled
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:27:19-41
+	android:exported
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:27:42-65
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:27:66-124
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:28:13-30:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:29:17-79
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:29:25-76
 uses-sdk
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:5-74
-MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
-MERGED from [:CordovaLib] D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:33:5-74
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/e71517013ee64ebe82e5a3949390ce2f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/e71517013ee64ebe82e5a3949390ce2f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/b22e9d9552b2a74877da52abbd733ec8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/b22e9d9552b2a74877da52abbd733ec8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/d8dde43ab9b044f994625dddc4cd3264/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:21:5-23:54
+MERGED from [:CordovaLib] /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/437ce26940cf9c5a8c504627f0083c3b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/437ce26940cf9c5a8c504627f0083c3b/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-fragment:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/805c38d8e16ca2c158e741d807a6d5ff/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/805c38d8e16ca2c158e741d807a6d5ff/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/8a8ba4fc3cba2e2e8b9e3d3acce1f5c4/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/8a8ba4fc3cba2e2e8b9e3d3acce1f5c4/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/67a1427b158f7bd1472891a985975f8b/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/67a1427b158f7bd1472891a985975f8b/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/8f13fa287f5c9d74a6aeeee485ac486a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/8f13fa287f5c9d74a6aeeee485ac486a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/7a891924e139e46a03802b096cceb384/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/7a891924e139e46a03802b096cceb384/AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/64d8e728c3cf1832ded5e6e1764d1d81/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/64d8e728c3cf1832ded5e6e1764d1d81/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/7504a7a9aaf53dc44f8a3c0a06ae4ecc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/7504a7a9aaf53dc44f8a3c0a06ae4ecc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/9eeaa898694294dd3ea9e1e468c24769/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/9eeaa898694294dd3ea9e1e468c24769/AndroidManifest.xml:4:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/f20b2087a37266c513fa8d185905ade2/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:42-71
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:33:42-71
 	android:minSdkVersion
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:13:15-41
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:33:15-41
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:14:5-81
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:34:5-81
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:34:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:15:5-79
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:35:5-79
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:15:22-76
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:35:22-76
 uses-feature#android.hardware.location.gps
-ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:5-66
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:36:5-66
 	android:name
-		ADDED from D:\SANJAYAPP\PROJECT\ionic4Map\SANJAY\Ionic\auth\auth\platforms\android\app\src\main\AndroidManifest.xml:16:19-63
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:36:19-63
+uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:37:5-80
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:37:22-77
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:38:5-71
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:38:22-68
+uses-permission#android.permission.READ_SYNC_SETTINGS
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:39:5-77
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:39:22-74
+uses-permission#android.permission.WRITE_SYNC_SETTINGS
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:40:5-78
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:40:22-75
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:41:5-81
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:41:22-78
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:42:5-94
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:42:22-91
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:43:5-79
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:43:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:44:5-89
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:44:22-86
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:45:5-68
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:45:22-65
+uses-permission#android.hardware.location
+ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:46:5-65
+	android:name
+		ADDED from /home/creates11/SANJAY/Ionic/Project/ionic4Map/SANJAY/Ionic/auth/auth/platforms/android/app/src/main/AndroidManifest.xml:46:22-62
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/creates11/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/159c11b7561c0bab14043f66a618d453/AndroidManifest.xml:24:13-79
